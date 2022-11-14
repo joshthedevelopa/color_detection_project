@@ -1,1 +1,1 @@
-web: gunicorn 'color_detection.wsgi' --log-file
+web: gunicorn 'color_detection.wsgi'
