@@ -86,3 +86,4 @@ Werkzeug==2.0.3
 xkit==0.0.0
 zorin-appearance==4.1
 zorin-exec-guard==1.5
+fontawesomefree==6.2.0

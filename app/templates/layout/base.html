@@ -9,6 +9,10 @@
 
     <title>Color Detection</title>
 
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
     <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
 
     {% block stylesheets %} {% endblock %}        
@@ -24,6 +28,10 @@
             <li><div></div></li>
             <li class="{% if tab == 'palette' %} active {% endif %}">
                 <a href="{% url 'palette' %}">Palette</a>
+            </li>
+            <li><div></div></li>
+            <li class="{% if tab == 'quiz' %} active {% endif %}">
+                <a href="{% url 'quiz' %}">Quizlet</a>
             </li>
         </ul>       
     </header>
