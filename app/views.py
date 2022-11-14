@@ -2,6 +2,8 @@ import json
 from django.http import HttpResponse
 from django.shortcuts import render
 import pandas as pd
+from django.views.decorators.csrf import requires_csrf_token
+
 
 
 def handle_uploaded_file(f):
@@ -14,6 +16,7 @@ def handle_uploaded_file(f):
 
 
 # Create your views here.
+@requires_csrf_token
 def index(request):
     return render(request, 'index.html', context={"tab": "home"})
 
@@ -22,7 +25,6 @@ def palette(request):
 
 def quiz(request):
     return render(request, 'quiz.html', context={"tab": "quiz"})
-
 
 
 
