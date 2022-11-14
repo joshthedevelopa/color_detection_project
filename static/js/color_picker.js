@@ -27,6 +27,9 @@ function pick(event, ctx, display, name, code) {
     display.style.background = rgba;
     code.innerHTML = rgba;
 
+    let formdata = new FormData(document.querySelector("form"));
+    formdata.append("color", )
+
     fetch("/color-name", {
         method: 'POST',
         headers: {

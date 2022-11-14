@@ -2,7 +2,7 @@ import json
 from django.http import HttpResponse
 from django.shortcuts import render
 import pandas as pd
-from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 
 
@@ -16,7 +16,6 @@ def handle_uploaded_file(f):
 
 
 # Create your views here.
-@requires_csrf_token
 def index(request):
     return render(request, 'index.html', context={"tab": "home"})
 
